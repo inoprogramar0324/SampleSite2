@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ | Aetheris Solutions</title>
+  <meta name="description" content="株式会社エーテリスソリューションズへのお問い合わせ窓口です。新規プロジェクトのご相談や採用など、お気軽にお問い合わせください。">
+  <link rel="icon" type="image/svg+xml" href="/src/assets/images/logo.svg" onerror="this.onerror=null; this.href='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22%236366F1%22/></svg>'">
+  <script type="module" crossorigin src="/assets/main-DDDijKnQ.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-HBD5YSBA.css">
+</head>
+<body>
+
+  <!-- Background Canvas -->
+  <canvas id="particles-canvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none;"></canvas>
+
+  <div class="ambient-glow"></div>
+  <div class="ambient-glow-secondary"></div>
+
+  <!-- HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="/" class="logo">
+        AETHERIS<span class="logo-dot"></span>
+      </a>
+      
+      <nav class="nav-menu" id="nav-menu">
+        <a href="/" class="nav-link">HOME</a>
+        <a href="/about.html" class="nav-link">ABOUT</a>
+        <a href="/services.html" class="nav-link">SERVICES</a>
+        <a href="/news.html" class="nav-link">NEWS</a>
+        <a href="/contact.html" class="nav-link">CONTACT</a>
+      </nav>
+
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <button class="theme-toggle" id="theme-toggle" aria-label="テーマの切り替え">
+          <svg id="theme-icon-moon" viewBox="0 0 24 24">
+            <path d="M12 3c.132 0 .263 0 .393.007a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 3zm0 2a7 7 0 1 0 5.48 11.39A9.5 9.5 0 0 1 12 5z"/>
+          </svg>
+          <svg id="theme-icon-sun" viewBox="0 0 24 24" style="display: none;">
+            <path d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0-7a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0V3a1 1 0 0 1 1-1zm0 15a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0v-2a1 1 0 0 1 1-1zM4.22 4.22a1 1 0 0 1 1.414 0l1.415 1.414a1 1 0 1 1-1.414 1.415L4.22 5.636a1 1 0 0 1 0-1.414zm12.728 12.728a1 1 0 0 1 1.414 0l1.415 1.414a1 1 0 0 1-1.414 1.414l-1.415-1.414a1 1 0 0 1 0-1.414zM2 12a1 1 0 0 1 1-1h2a1 1 0 0 1 0 2H3a1 1 0 0 1-1-1zm15 0a1 1 0 0 1 1-1h2a1 1 0 0 1 0 2h-2a1 1 0 0 1-1-1zM5.636 18.364a1 1 0 0 1 0 1.414l-1.414 1.415a1 1 0 1 1-1.415-1.414l1.414-1.415a1 1 0 0 1 1.415 0zm12.728-12.728a1 1 0 0 1 0 1.414L16.95 8.464a1 1 0 1 1-1.414-1.414l1.414-1.415a1 1 0 0 1 1.414 0z"/>
+          </svg>
+        </button>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開閉">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-tag">Contact</span>
+      <h1 class="page-hero-title">お問い合わせ</h1>
+      <p class="page-hero-desc">ご相談、お見積りの依頼、または採用に関することなど、下記フォームよりお気軽にご連絡ください。</p>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM SECTION -->
+  <section style="padding: 20px 0 100px; position: relative; z-index: 10;">
+    <div class="container" style="max-width: 800px;">
+      
+      <div class="glass-panel" style="padding: 50px;">
+        
+        <!-- Input Form -->
+        <form id="contact-form" novalidate>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px;">
+            <div class="form-group">
+              <label for="name">お名前 <span class="required-badge">必須</span></label>
+              <input type="text" id="name" placeholder="山田 太郎" required>
+              <span class="error-message" id="name-error"></span>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">メールアドレス <span class="required-badge">必須</span></label>
+              <input type="email" id="email" placeholder="example@aetheris.co.jp" required>
+              <span class="error-message" id="email-error"></span>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px;">
+            <div class="form-group">
+              <label for="category">お問い合わせカテゴリ</label>
+              <div style="position: relative;">
+                <select id="category">
+                  <option value="services">デジタル製品・Web開発のご相談</option>
+                  <option value="dx-cloud">DX・クラウド移行のご相談</option>
+                  <option value="ai-systems">AIシステム導入のご相談</option>
+                  <option value="partnership">ビジネスパートナーシップ</option>
+                  <option value="recruiting">採用情報について</option>
+                  <option value="other">その他</option>
+                </select>
+                <!-- Custom drop down arrow indicator inside select -->
+                <div style="position: absolute; right: 16px; top: 50%; transform: translateY(-50%); pointer-events: none; color: var(--text-muted);">
+                  ▼
+                </div>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">件名 <span class="required-badge">必須</span></label>
+              <input type="text" id="subject" placeholder="ご相談内容の概要" required>
+              <span class="error-message" id="subject-error"></span>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 32px;">
+            <label for="message">メッセージ内容 <span class="required-badge">必須</span></label>
+            <textarea id="message" rows="6" placeholder="具体的なご要望やご質問内容を入力してください。" required></textarea>
+            <span class="error-message" id="message-error"></span>
+          </div>
+
+          <!-- Privacy Policy Agreement -->
+          <div style="margin-bottom: 36px; display: flex; align-items: flex-start; gap: 12px;">
+            <input type="checkbox" id="agree" style="width: 20px; height: 20px; accent-color: var(--color-primary); cursor: pointer; margin-top: 2px;">
+            <label for="agree" style="font-size: 14px; color: var(--text-secondary); cursor: pointer; user-select: none;">
+              Aetheris Solutionsの <a href="#" style="color: var(--color-primary); text-decoration: underline;">プライバシーポリシー</a> に同意の上、送信します。
+            </label>
+          </div>
+
+          <div style="text-align: center;">
+            <button type="submit" class="btn btn-primary" style="padding: 16px 50px; font-size: 16px; min-width: 220px;">メッセージを送信する</button>
+          </div>
+        </form>
+
+        <!-- Success Message Layout (Default Hidden) -->
+        <div id="contact-success" class="hide" style="text-align: center; opacity: 0; transform: translateY(20px); transition: all 0.5s ease;">
+          <div style="width: 80px; height: 80px; background: rgba(16, 185, 129, 0.1); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 24px; color: var(--color-accent); border: 2px solid rgba(16, 185, 129, 0.3);">
+            <svg width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <h2 style="font-size: 28px; font-weight: 800; margin-bottom: 16px; color: var(--text-primary);">送信が完了しました</h2>
+          <p style="color: var(--text-secondary); font-size: 15px; max-width: 500px; margin: 0 auto 36px; line-height: 1.7;">
+            お問い合わせいただき、誠にありがとうございます。入力いただいた内容を確認し、担当者より通常2営業日以内（土日祝日を除く）にご返信を差し上げます。
+          </p>
+          <a href="/" class="btn btn-secondary">ホームへ戻る</a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo" style="margin-bottom: 16px;">AETHERIS<span class="logo-dot"></span></a>
+        <p>株式会社エーテリスソリューションズは、卓越したクリエイティブテクノロジーでビジネスの未来を形にするイノベーションエージェンシーです。</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="X">X</a>
+          <a href="#" class="social-link" aria-label="LinkedIn">LN</a>
+          <a href="#" class="social-link" aria-label="GitHub">GH</a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="footer-heading">企業情報</h4>
+        <div class="footer-links">
+          <a href="/">HOME</a>
+          <a href="/about.html">私たちについて</a>
+          <a href="/services.html">事業内容</a>
+          <a href="/news.html">お知らせ</a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">サポート</h4>
+        <div class="footer-links">
+          <a href="/contact.html">お問い合わせ</a>
+          <a href="#">プライバシーポリシー</a>
+          <a href="#">情報セキュリティ基本方針</a>
+          <a href="#">サービス利用規約</a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">本社情報</h4>
+        <div class="footer-info">
+          <div class="footer-info-item">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+            <span>〒150-0002 東京都渋谷区渋谷2丁目24-12<br>渋谷スクランブルスクエア 38F</span>
+          </div>
+          <div class="footer-info-item">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <span>contact@aetheris.co.jp</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Aetheris Solutions Inc. All rights reserved.</p>
+      <p>Designed for Excellence.</p>
+    </div>
+  </footer>
+
+  <style>
+    /* Form Group Styles */
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .form-group label {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    .required-badge {
+      background: #EF4444;
+      color: #FFFFFF;
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-left: 6px;
+      font-weight: 700;
+    }
+    .form-group input, .form-group textarea, .form-group select {
+      background: var(--bg-panel);
+      border: 1px solid var(--border-glass);
+      border-radius: var(--border-radius-sm);
+      padding: 14px 18px;
+      font-size: 15px;
+      color: var(--text-primary);
+      width: 100%;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: var(--transition-fast);
+    }
+    .form-group select {
+      appearance: none;
+      -webkit-appearance: none;
+      cursor: pointer;
+    }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+    }
+    
+    /* Error and success validation classes */
+    .form-group input.input-error, .form-group textarea.input-error {
+      border-color: #EF4444 !important;
+      box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2) !important;
+    }
+    .form-group input.input-success, .form-group textarea.input-success {
+      border-color: #10B981 !important;
+    }
+    .error-message {
+      font-size: 13px;
+      color: #EF4444;
+      font-weight: 500;
+      height: 18px;
+      opacity: 0;
+      transform: translateY(-5px);
+      transition: var(--transition-fast);
+    }
+    .error-message.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* Dynamic transitions for form hide/show */
+    .hide {
+      display: none !important;
+    }
+    
+    /* Spinner animation */
+    @keyframes spin {
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+
+</body>
+</html>

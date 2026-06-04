@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>私たちについて | Aetheris Solutions</title>
+  <meta name="description" content="株式会社エーテリスソリューションズのミッション、バリュー、代表メッセージ、会社概要、沿革について紹介します。">
+  <link rel="icon" type="image/svg+xml" href="/src/assets/images/logo.svg" onerror="this.onerror=null; this.href='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22%236366F1%22/></svg>'">
+</head>
+<body>
+
+  <!-- Background Canvas -->
+  <canvas id="particles-canvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none;"></canvas>
+
+  <div class="ambient-glow"></div>
+  <div class="ambient-glow-secondary"></div>
+
+  <!-- HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="/" class="logo">
+        AETHERIS<span class="logo-dot"></span>
+      </a>
+      
+      <nav class="nav-menu" id="nav-menu">
+        <a href="/" class="nav-link">HOME</a>
+        <a href="/about.html" class="nav-link">ABOUT</a>
+        <a href="/services.html" class="nav-link">SERVICES</a>
+        <a href="/news.html" class="nav-link">NEWS</a>
+        <a href="/contact.html" class="nav-link">CONTACT</a>
+      </nav>
+
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <button class="theme-toggle" id="theme-toggle" aria-label="テーマの切り替え">
+          <svg id="theme-icon-moon" viewBox="0 0 24 24">
+            <path d="M12 3c.132 0 .263 0 .393.007a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 3zm0 2a7 7 0 1 0 5.48 11.39A9.5 9.5 0 0 1 12 5z"/>
+          </svg>
+          <svg id="theme-icon-sun" viewBox="0 0 24 24" style="display: none;">
+            <path d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0-7a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0V3a1 1 0 0 1 1-1zm0 15a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0v-2a1 1 0 0 1 1-1zM4.22 4.22a1 1 0 0 1 1.414 0l1.415 1.414a1 1 0 1 1-1.414 1.415L4.22 5.636a1 1 0 0 1 0-1.414zm12.728 12.728a1 1 0 0 1 1.414 0l1.415 1.414a1 1 0 0 1-1.414 1.414l-1.415-1.414a1 1 0 0 1 0-1.414zM2 12a1 1 0 0 1 1-1h2a1 1 0 0 1 0 2H3a1 1 0 0 1-1-1zm15 0a1 1 0 0 1 1-1h2a1 1 0 0 1 0 2h-2a1 1 0 0 1-1-1zM5.636 18.364a1 1 0 0 1 0 1.414l-1.414 1.415a1 1 0 1 1-1.415-1.414l1.414-1.415a1 1 0 0 1 1.415 0zm12.728-12.728a1 1 0 0 1 0 1.414L16.95 8.464a1 1 0 1 1-1.414-1.414l1.414-1.415a1 1 0 0 1 1.414 0z"/>
+          </svg>
+        </button>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開閉">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-tag">About Us</span>
+      <h1 class="page-hero-title">私たちについて</h1>
+      <p class="page-hero-desc">テクノロジーの可能性を開拓し、すべてのビジネスに革新をもたらす情熱的なデジタルチームです。</p>
+    </div>
+  </section>
+
+  <!-- CEO MESSAGE SECTION -->
+  <section style="padding: 60px 0; position: relative; z-index: 10;">
+    <div class="container" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: center;">
+      <!-- CEO visual -->
+      <div>
+        <div style="position: relative; border-radius: var(--border-radius-lg); overflow: hidden; border: 1px solid var(--border-glass); box-shadow: var(--shadow-premium);">
+          <img src="/src/assets/images/about.png" alt="Aetheris solutions modern office" style="width: 100%;">
+          <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 50%; background: linear-gradient(to top, rgba(11, 15, 25, 0.9) 0%, rgba(11, 15, 25, 0) 100%);"></div>
+          <div style="position: absolute; bottom: 30px; left: 30px;">
+            <p style="font-size: 14px; color: var(--color-primary); font-weight: 700; margin-bottom: 4px;">CEO & FOUNDER</p>
+            <h4 style="font-size: 20px; font-weight: 800; color: #FFFFFF;">神崎 悠生 / Yuki Kanzaki</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- CEO Message -->
+      <div>
+        <span style="font-weight: 700; color: var(--color-primary); font-size: 14px; text-transform: uppercase; margin-bottom: 12px; display: inline-block;">MESSAGE</span>
+        <h2 style="font-size: 32px; font-weight: 800; margin-bottom: 24px; line-height: 1.3;">技術とクリエイティビティで<br><span class="text-gradient">社会の可能性を拡張する。</span></h2>
+        
+        <div style="color: var(--text-secondary); font-size: 15px; display: flex; flex-direction: column; gap: 20px; line-height: 1.8;">
+          <p>
+            インターネットの台頭から四半世紀が経過し、世の中のデジタル化はかつてないスピードで加速しています。AIやクラウドの急速な進化により、企業経営に求められる技術変革は単なる手段ではなく、成長のためのコアエンジンそのものとなっています。
+          </p>
+          <p>
+            私たちAetheris Solutionsは、こうした激しい変化の時代において、単なるシステム開発会社に留まらず、常にお客様のビジネスの変革に寄り添う「デジタルイノベーションパートナー」でありたいと考えています。
+          </p>
+          <p>
+            私たちは、洗練されたデザインと堅牢なテクノロジー、そして次世代のAI技術を融合させることで、これまでにない価値と体験を社会に届けてまいります。代表取締役として、お客様と共に未来を描き、社会へ多大なイノベーション貢献を果たすことをお約束いたします。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY / MVV SECTION -->
+  <section style="padding: 100px 0; background: var(--bg-panel); border-top: 1px solid var(--border-glass); border-bottom: 1px solid var(--border-glass); position: relative; z-index: 10;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">MVV</span>
+        <h2 class="section-title">ミッション・ビジョン・バリュー</h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 60px;">
+        <div class="glass-card" style="padding: 40px; text-align: center;">
+          <span style="font-size: 13px; font-weight: 700; color: var(--color-primary); text-transform: uppercase; letter-spacing: 2px;">MISSION</span>
+          <h3 style="font-size: 24px; font-weight: 800; margin: 16px 0;">社会へ新たな架け橋を</h3>
+          <p style="color: var(--text-secondary); font-size: 15px; line-height: 1.7;">難解で複雑になりがちな最先端のテクノロジーを、すべての人が恩恵を受けられる形に変え、未来と現在の新しい架け橋を構築します。</p>
+        </div>
+
+        <div class="glass-card" style="padding: 40px; text-align: center;">
+          <span style="font-size: 13px; font-weight: 700; color: var(--color-secondary); text-transform: uppercase; letter-spacing: 2px;">VISION</span>
+          <h3 style="font-size: 24px; font-weight: 800; margin: 16px 0;">不可能を可能にする設計</h3>
+          <p style="color: var(--text-secondary); font-size: 15px; line-height: 1.7;">イノベーションの力で企業の潜在能力を最大限に引き出し、これまでの常識を超える「不可能だった成長」を具現化する世界を目指します。</p>
+        </div>
+
+        <div class="glass-card" style="padding: 40px; text-align: center;">
+          <span style="font-size: 13px; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 2px;">VALUE</span>
+          <h3 style="font-size: 24px; font-weight: 800; margin: 16px 0;">3つのコアマインド</h3>
+          <p style="color: var(--text-secondary); font-size: 15px; line-height: 1.7;">現状維持を拒む「あくなき挑戦」、最高の品質を届ける「揺るぎなき執念」、そして成果へこだわる「確かなコミットメント」を行動指針とします。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPANY PROFILE TABLE -->
+  <section style="padding: 100px 0; position: relative; z-index: 10;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Profile</span>
+        <h2 class="section-title">会社概要</h2>
+      </div>
+
+      <div style="max-width: 800px; margin: 60px auto 0;">
+        <table class="profile-table" style="width: 100%; border-collapse: collapse; text-align: left;">
+          <tbody>
+            <tr>
+              <th>会社名</th>
+              <td>株式会社エーテリスソリューションズ (Aetheris Solutions Inc.)</td>
+            </tr>
+            <tr>
+              <th>設立</th>
+              <td>2020年10月1日</td>
+            </tr>
+            <tr>
+              <th>代表取締役</th>
+              <td>神崎 悠生</td>
+            </tr>
+            <tr>
+              <th>資本金</th>
+              <td>50,000,000円</td>
+            </tr>
+            <tr>
+              <th>所在地</th>
+              <td>〒150-0002 東京都渋谷区渋谷2丁目24-12 渋谷スクランブルスクエア 38F</td>
+            </tr>
+            <tr>
+              <th>事業内容</th>
+              <td>
+                1. クリエイティブテクノロジー（Web & モバイル開発）<br>
+                2. デジタルトランスフォーメーション（DX）支援<br>
+                3. クラウドアーキテクチャ設計・導入コンサルティング<br>
+                4. LLM API統合・AIシステム開発
+              </td>
+            </tr>
+            <tr>
+              <th>主要取引銀行</th>
+              <td>三菱UFJ銀行、三井住友銀行、みずほ銀行</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- HISTORY TIMELINE SECTION -->
+  <section style="padding: 100px 0; background: var(--bg-panel); border-top: 1px solid var(--border-glass); position: relative; z-index: 10;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">History</span>
+        <h2 class="section-title">沿革</h2>
+      </div>
+
+      <div class="timeline" style="position: relative; max-width: 800px; margin: 60px auto 0; padding: 20px 0;">
+        <!-- Dotted center line -->
+        <div style="position: absolute; top: 0; bottom: 0; left: 50px; width: 2px; background: linear-gradient(to bottom, var(--color-primary), var(--color-secondary));"></div>
+
+        <!-- History Items -->
+        <div class="timeline-item" style="position: relative; margin-bottom: 40px; padding-left: 100px;">
+          <!-- Node Dot -->
+          <div style="position: absolute; left: 42px; top: 8px; width: 18px; height: 18px; border-radius: 50%; background: var(--bg-primary); border: 4px solid var(--color-primary); box-shadow: 0 0 10px var(--color-primary); z-index: 5;"></div>
+          
+          <span style="font-size: 15px; font-weight: 700; color: var(--color-primary); margin-bottom: 8px; display: inline-block;">2020年 10月</span>
+          <h4 style="font-size: 18px; font-weight: 700; margin-bottom: 8px; color: var(--text-primary);">株式会社エーテリスソリューションズを東京都渋谷区に設立</h4>
+          <p style="color: var(--text-secondary); font-size: 14px;">資本金1,000万円でスタート。企業のWebフロントエンド開発・UIデザイン支援を開始。</p>
+        </div>
+
+        <div class="timeline-item" style="position: relative; margin-bottom: 40px; padding-left: 100px;">
+          <!-- Node Dot -->
+          <div style="position: absolute; left: 42px; top: 8px; width: 18px; height: 18px; border-radius: 50%; background: var(--bg-primary); border: 4px solid var(--color-primary); box-shadow: 0 0 10px var(--color-primary); z-index: 5;"></div>
+          
+          <span style="font-size: 15px; font-weight: 700; color: var(--color-primary); margin-bottom: 8px; display: inline-block;">2022年 03月</span>
+          <h4 style="font-size: 18px; font-weight: 700; margin-bottom: 8px; color: var(--text-primary);">DXコンサルティング部門の立ち上げと資本金増資</h4>
+          <p style="color: var(--text-secondary); font-size: 14px;">資本金を3,000万円に増資。業務基盤のクラウド移行（AWS・Google Cloud）およびマイクロサービス設計のコンサルティングサービスを開始。</p>
+        </div>
+
+        <div class="timeline-item" style="position: relative; margin-bottom: 40px; padding-left: 100px;">
+          <!-- Node Dot -->
+          <div style="position: absolute; left: 42px; top: 8px; width: 18px; height: 18px; border-radius: 50%; background: var(--bg-primary); border: 4px solid var(--color-secondary); box-shadow: 0 0 10px var(--color-secondary); z-index: 5;"></div>
+          
+          <span style="font-size: 15px; font-weight: 700; color: var(--color-secondary); margin-bottom: 8px; display: inline-block;">2024年 08月</span>
+          <h4 style="font-size: 18px; font-weight: 700; margin-bottom: 8px; color: var(--text-primary);">本社を渋谷スクランブルスクエアへ移転</h4>
+          <p style="color: var(--text-secondary); font-size: 14px;">事業成長に伴う人員増加のため、本社オフィスを現在の渋谷スクランブルスクエア（38F）に移転。</p>
+        </div>
+
+        <div class="timeline-item" style="position: relative; padding-left: 100px;">
+          <!-- Node Dot -->
+          <div style="position: absolute; left: 42px; top: 8px; width: 18px; height: 18px; border-radius: 50%; background: var(--bg-primary); border: 4px solid var(--color-accent); box-shadow: 0 0 10px var(--color-accent); z-index: 5;"></div>
+          
+          <span style="font-size: 15px; font-weight: 700; color: var(--color-accent); margin-bottom: 8px; display: inline-block;">2026年 06月</span>
+          <h4 style="font-size: 18px; font-weight: 700; margin-bottom: 8px; color: var(--text-primary);">自社AIサービスおよびサイトのフルリニューアル</h4>
+          <p style="color: var(--text-secondary); font-size: 14px;">企業のLLM活用をノーコード／ローコードで推進する統合AIプラットフォーム「AetherFlow」の提供を開始。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo" style="margin-bottom: 16px;">AETHERIS<span class="logo-dot"></span></a>
+        <p>株式会社エーテリスソリューションズは、卓越したクリエイティブテクノロジーでビジネスの未来を形にするイノベーションエージェンシーです。</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="X">X</a>
+          <a href="#" class="social-link" aria-label="LinkedIn">LN</a>
+          <a href="#" class="social-link" aria-label="GitHub">GH</a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="footer-heading">企業情報</h4>
+        <div class="footer-links">
+          <a href="/">HOME</a>
+          <a href="/about.html">私たちについて</a>
+          <a href="/services.html">事業内容</a>
+          <a href="/news.html">お知らせ</a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">サポート</h4>
+        <div class="footer-links">
+          <a href="/contact.html">お問い合わせ</a>
+          <a href="#">プライバシーポリシー</a>
+          <a href="#">情報セキュリティ基本方針</a>
+          <a href="#">サービス利用規約</a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">本社情報</h4>
+        <div class="footer-info">
+          <div class="footer-info-item">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+            <span>〒150-0002 東京都渋谷区渋谷2丁目24-12<br>渋谷スクランブルスクエア 38F</span>
+          </div>
+          <div class="footer-info-item">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <span>contact@aetheris.co.jp</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Aetheris Solutions Inc. All rights reserved.</p>
+      <p>Designed for Excellence.</p>
+    </div>
+  </footer>
+
+  <style>
+    /* Profile Table Styling */
+    .profile-table tr {
+      border-bottom: 1px solid var(--border-glass);
+      transition: var(--transition-fast);
+    }
+    .profile-table tr:hover {
+      background: var(--bg-panel);
+    }
+    .profile-table th {
+      width: 25%;
+      padding: 24px 16px;
+      font-weight: 700;
+      color: var(--text-primary);
+      vertical-align: top;
+    }
+    .profile-table td {
+      padding: 24px 16px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+    @media (max-width: 576px) {
+      .profile-table th, .profile-table td {
+        display: block;
+        width: 100%;
+        padding: 12px 8px;
+      }
+      .profile-table th {
+        border-bottom: none;
+      }
+    }
+  </style>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

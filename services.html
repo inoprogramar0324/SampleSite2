@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>事業紹介 | Aetheris Solutions</title>
+  <meta name="description" content="株式会社エーテリスソリューションズが提供するクリエイティブテクノロジー、クラウドDX、AI開発などの事業ソリューションについて紹介します。">
+  <link rel="icon" type="image/svg+xml" href="/src/assets/images/logo.svg" onerror="this.onerror=null; this.href='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22%236366F1%22/></svg>'">
+</head>
+<body>
+
+  <!-- Background Canvas -->
+  <canvas id="particles-canvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none;"></canvas>
+
+  <div class="ambient-glow"></div>
+  <div class="ambient-glow-secondary"></div>
+
+  <!-- HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="/" class="logo">
+        AETHERIS<span class="logo-dot"></span>
+      </a>
+      
+      <nav class="nav-menu" id="nav-menu">
+        <a href="/" class="nav-link">HOME</a>
+        <a href="/about.html" class="nav-link">ABOUT</a>
+        <a href="/services.html" class="nav-link">SERVICES</a>
+        <a href="/news.html" class="nav-link">NEWS</a>
+        <a href="/contact.html" class="nav-link">CONTACT</a>
+      </nav>
+
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <button class="theme-toggle" id="theme-toggle" aria-label="テーマの切り替え">
+          <svg id="theme-icon-moon" viewBox="0 0 24 24">
+            <path d="M12 3c.132 0 .263 0 .393.007a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 3zm0 2a7 7 0 1 0 5.48 11.39A9.5 9.5 0 0 1 12 5z"/>
+          </svg>
+          <svg id="theme-icon-sun" viewBox="0 0 24 24" style="display: none;">
+            <path d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0-7a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0V3a1 1 0 0 1 1-1zm0 15a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0v-2a1 1 0 0 1 1-1zM4.22 4.22a1 1 0 0 1 1.414 0l1.415 1.414a1 1 0 1 1-1.414 1.415L4.22 5.636a1 1 0 0 1 0-1.414zm12.728 12.728a1 1 0 0 1 1.414 0l1.415 1.414a1 1 0 0 1-1.414 1.414l-1.415-1.414a1 1 0 0 1 0-1.414zM2 12a1 1 0 0 1 1-1h2a1 1 0 0 1 0 2H3a1 1 0 0 1-1-1zm15 0a1 1 0 0 1 1-1h2a1 1 0 0 1 0 2h-2a1 1 0 0 1-1-1zM5.636 18.364a1 1 0 0 1 0 1.414l-1.414 1.415a1 1 0 1 1-1.415-1.414l1.414-1.415a1 1 0 0 1 1.415 0zm12.728-12.728a1 1 0 0 1 0 1.414L16.95 8.464a1 1 0 1 1-1.414-1.414l1.414-1.415a1 1 0 0 1 1.414 0z"/>
+          </svg>
+        </button>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="メニューを開閉">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-tag">Services</span>
+      <h1 class="page-hero-title">提供する事業ソリューション</h1>
+      <p class="page-hero-desc">クリエイティブな表現から、ミッションクリティカルなクラウドインフラ、最先端のAI設計までトータルに支援します。</p>
+    </div>
+  </section>
+
+  <!-- INTRODUCTORY BRAND VISUAL SECTION -->
+  <section style="padding: 40px 0; position: relative; z-index: 10;">
+    <div class="container" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: center;">
+      <div>
+        <h2 style="font-size: 32px; font-weight: 800; margin-bottom: 20px; line-height: 1.3;">アイデアを最速でプロダクトにし、<br><span class="text-gradient">ビジネスを圧倒的スケールへ。</span></h2>
+        <p style="color: var(--text-secondary); font-size: 15px; line-height: 1.8; margin-bottom: 24px;">
+          技術の進化は、新たな価値を創造する大きなチャンスです。私たちは、戦略的アプローチでお客様の真の強みを見出し、最先端のテクノロジーを駆使してそれらを形にします。
+        </p>
+        <p style="color: var(--text-secondary); font-size: 15px; line-height: 1.8; margin-bottom: 32px;">
+          すべてのプロジェクトにおいて、単なるアウトソーシングではなく、プロダクトマネジメント、UXデザイン、先進のインフラ設計まで一貫して支援し、ユーザーの心を掴むプロダクトを生み出します。
+        </p>
+        <a href="/contact.html" class="btn btn-primary">サービスについて相談する</a>
+      </div>
+
+      <div>
+        <div style="border-radius: var(--border-radius-lg); overflow: hidden; border: 1px solid var(--border-glass); box-shadow: var(--shadow-premium);">
+          <img src="/src/assets/images/services.png" alt="Aetheris digital service structure concept" style="width: 100%;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THREE MAIN SERVICE DOMAINS -->
+  <section style="padding: 100px 0; background: var(--bg-panel); border-top: 1px solid var(--border-glass); border-bottom: 1px solid var(--border-glass); position: relative; z-index: 10;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Details</span>
+        <h2 class="section-title">サービス詳細</h2>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 60px; margin-top: 60px;">
+        
+        <!-- Service 1: Creative Tech -->
+        <div class="glass-card" style="padding: 50px; display: grid; grid-template-columns: 1fr 2fr; gap: 40px; align-items: start;">
+          <div>
+            <span style="font-size: 12px; font-weight: 700; color: var(--color-primary); letter-spacing: 2px;">01 / CREATIVE TECH</span>
+            <h3 style="font-size: 26px; font-weight: 800; margin: 12px 0 16px;">Web & App<br>Development</h3>
+            <div style="color: var(--text-muted); font-size: 14px;">Webアプリケーション開発 / モバイル開発 / UI・UXデザイン</div>
+          </div>
+          <div>
+            <p style="color: var(--text-secondary); font-size: 15px; line-height: 1.8; margin-bottom: 24px;">
+              私たちは、TypeScript、React/Next.js、Vue/Nuxt.jsなどのモダンフロントエンド技術を駆使し、超高速でアニメーションが豊富な美しいユーザーインターフェースを開発します。モバイルアプリ開発（Flutter、React Native、Swift/Kotlin）もシームレスに対応し、優れたUX設計に魂を吹き込みます。
+            </p>
+            <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; color: var(--text-primary); font-size: 14px; font-weight: 600;">
+              <li style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; background: var(--color-primary); border-radius: 50%;"></span> SPA / SSR Webアプリケーション</li>
+              <li style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; background: var(--color-primary); border-radius: 50%;"></span> iOS / Android クロスプラットフォーム開発</li>
+              <li style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; background: var(--color-primary); border-radius: 50%;"></span> UI・UX体験デザイン / インタラクティブ設計</li>
+              <li style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; background: var(--color-primary); border-radius: 50%;"></span> 高性能ヘッドレスCMS導入</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Service 2: DX Consulting -->
+        <div class="glass-card" style="padding: 50px; display: grid; grid-template-columns: 1fr 2fr; gap: 40px; align-items: start;">
+          <div>
+            <span style="font-size: 12px; font-weight: 700; color: var(--color-secondary); letter-spacing: 2px;">02 / CONSULTING</span>
+            <h3 style="font-size: 26px; font-weight: 800; margin: 12px 0 16px;">DX & Cloud<br>Integration</h3>
+            <div style="color: var(--text-muted); font-size: 14px;">AWS・GCPクラウド移行 / マイクロサービス / インフラ自動化</div>
+          </div>
+          <div>
+            <p style="color: var(--text-secondary); font-size: 15px; line-height: 1.8; margin-bottom: 24px;">
+              レガシーシステムのモダンなクラウドベースアーキテクチャ（AWS、Google Cloud）への安全な移行を支援します。インフラのコード化（TerraformなどによるIaC）、サーバーレス設計、Kubernetesによるコンテナ化を通じて、急激なユーザー増加に耐えうる拡張性と万全のセキュリティ、そして運用コストの圧倒的な削減を実現します。
+            </p>
+            <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; color: var(--text-primary); font-size: 14px; font-weight: 600;">
+              <li style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; background: var(--color-secondary); border-radius: 50%;"></span> クラウドマイグレーション支援</li>
+              <li style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; background: var(--color-secondary); border-radius: 50%;"></span> Terraformによるインフラ自動定義 (IaC)</li>
+              <li style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; background: var(--color-secondary); border-radius: 50%;"></span> Kubernetesコンテナオーケストレーション</li>
+              <li style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; background: var(--color-secondary); border-radius: 50%;"></span> CI・CD自動ビルドデプロイパイプライン構築</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Service 3: AI Integration -->
+        <div class="glass-card" style="padding: 50px; display: grid; grid-template-columns: 1fr 2fr; gap: 40px; align-items: start;">
+          <div>
+            <span style="font-size: 12px; font-weight: 700; color: var(--color-accent); letter-spacing: 2px;">03 / AI SOLUTIONS</span>
+            <h3 style="font-size: 26px; font-weight: 800; margin: 12px 0 16px;">AI & Neural<br>Systems</h3>
+            <div style="color: var(--text-muted); font-size: 14px;">LLMカスタマイズ / AIエージェント設計 / データ分析エンジン</div>
+          </div>
+          <div>
+            <p style="color: var(--text-secondary); font-size: 15px; line-height: 1.8; margin-bottom: 24px;">
+              ChatGPT、Claudeなどの大規模言語モデル（LLM）APIを業務フローへシームレスに統合し、社内データに基づいた高精度な独自ナレッジAI（RAGシステム）の構築を可能にします。定型業務の自動処理、インテリジェントなデータ抽出、ユーザー対応の自動化など、即効性の高い次世代AIエージェントソリューションを提供します。
+            </p>
+            <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; color: var(--text-primary); font-size: 14px; font-weight: 600;">
+              <li style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; background: var(--color-accent); border-radius: 50%;"></span> 独自RAG（検索拡張生成）システム開発</li>
+              <li style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; background: var(--color-accent); border-radius: 50%;"></span> 自律型業務AIエージェントの作成</li>
+              <li style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; background: var(--color-accent); border-radius: 50%;"></span> LLM API（OpenAI, Anthropic）とのセキュア連携</li>
+              <li style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; background: var(--color-accent); border-radius: 50%;"></span> 予測データモデリング・機械学習</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE PROCESS SECTION -->
+  <section style="padding: 100px 0; position: relative; z-index: 10;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Process</span>
+        <h2 class="section-title">導入プロセス</h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 60px;">
+        <div class="glass-card" style="padding: 30px; position: relative;">
+          <span style="font-size: 36px; font-weight: 800; color: var(--color-glow); position: absolute; top: 15px; right: 20px;">01</span>
+          <h4 style="font-size: 18px; font-weight: 700; margin-bottom: 12px; margin-top: 10px;">ヒアリング・戦略立案</h4>
+          <p style="color: var(--text-secondary); font-size: 14px; line-height: 1.6;">貴社のビジネス要件や現在の技術的課題、目指すべきゴールを徹底的にお伺いし、最適なアプローチと技術スタックを定義します。</p>
+        </div>
+
+        <div class="glass-card" style="padding: 30px; position: relative;">
+          <span style="font-size: 36px; font-weight: 800; color: var(--color-glow); position: absolute; top: 15px; right: 20px;">02</span>
+          <h4 style="font-size: 18px; font-weight: 700; margin-bottom: 12px; margin-top: 10px;">設計・プロトタイプ</h4>
+          <p style="color: var(--text-secondary); font-size: 14px; line-height: 1.6;">UX/UIの基本ワイヤーフレーム設計やシステムの基本アーキテクチャ構成を作成し、実際に触れる形で早期プロトタイプをご提案します。</p>
+        </div>
+
+        <div class="glass-card" style="padding: 30px; position: relative;">
+          <span style="font-size: 36px; font-weight: 800; color: var(--color-glow); position: absolute; top: 15px; right: 20px;">03</span>
+          <h4 style="font-size: 18px; font-weight: 700; margin-bottom: 12px; margin-top: 10px;">アジャイル開発</h4>
+          <p style="color: var(--text-secondary); font-size: 14px; line-height: 1.6;">スクラム体制のもと、細かなスプリント単位で開発とレビューを高速に繰り返し、プロダクトの進捗と品質を透明に保ちます。</p>
+        </div>
+
+        <div class="glass-card" style="padding: 30px; position: relative;">
+          <span style="font-size: 36px; font-weight: 800; color: var(--color-glow); position: absolute; top: 15px; right: 20px;">04</span>
+          <h4 style="font-size: 18px; font-weight: 700; margin-bottom: 12px; margin-top: 10px;">検証・リリース</h4>
+          <p style="color: var(--text-secondary); font-size: 14px; line-height: 1.6;">厳格な品質監査、負荷耐久テスト、脆弱性診断を実施し、完璧にチューニングされた状態で安全に本番稼働へと移行させます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo" style="margin-bottom: 16px;">AETHERIS<span class="logo-dot"></span></a>
+        <p>株式会社エーテリスソリューションズは、卓越したクリエイティブテクノロジーでビジネスの未来を形にするイノベーションエージェンシーです。</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="X">X</a>
+          <a href="#" class="social-link" aria-label="LinkedIn">LN</a>
+          <a href="#" class="social-link" aria-label="GitHub">GH</a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="footer-heading">企業情報</h4>
+        <div class="footer-links">
+          <a href="/">HOME</a>
+          <a href="/about.html">私たちについて</a>
+          <a href="/services.html">事業内容</a>
+          <a href="/news.html">お知らせ</a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">サポート</h4>
+        <div class="footer-links">
+          <a href="/contact.html">お問い合わせ</a>
+          <a href="#">プライバシーポリシー</a>
+          <a href="#">情報セキュリティ基本方針</a>
+          <a href="#">サービス利用規約</a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">本社情報</h4>
+        <div class="footer-info">
+          <div class="footer-info-item">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+            <span>〒150-0002 東京都渋谷区渋谷2丁目24-12<br>渋谷スクランブルスクエア 38F</span>
+          </div>
+          <div class="footer-info-item">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <span>contact@aetheris.co.jp</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Aetheris Solutions Inc. All rights reserved.</p>
+      <p>Designed for Excellence.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
