@@ -59,8 +59,8 @@
   </section>
 
   <!-- INTRODUCTORY BRAND VISUAL SECTION -->
-  <section style="padding: 40px 0; position: relative; z-index: 10;">
-    <div class="container" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: center;">
+  <section class="section-mobile-pad" style="padding: 40px 0; position: relative; z-index: 10;">
+    <div class="container services-intro-grid" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: center;">
       <div>
         <h2 style="font-size: 32px; font-weight: 800; margin-bottom: 20px; line-height: 1.3;">アイデアを最速でプロダクトにし、<br><span class="text-gradient">ビジネスを圧倒的スケールへ。</span></h2>
         <p style="color: var(--text-secondary); font-size: 15px; line-height: 1.8; margin-bottom: 24px;">
@@ -81,7 +81,7 @@
   </section>
 
   <!-- THREE MAIN SERVICE DOMAINS -->
-  <section style="padding: 100px 0; background: var(--bg-panel); border-top: 1px solid var(--border-glass); border-bottom: 1px solid var(--border-glass); position: relative; z-index: 10;">
+  <section class="section-mobile-pad" style="padding: 100px 0; background: var(--bg-panel); border-top: 1px solid var(--border-glass); border-bottom: 1px solid var(--border-glass); position: relative; z-index: 10;">
     <div class="container">
       <div class="section-header">
         <span class="section-tag">Details</span>
@@ -91,56 +91,50 @@
       <div style="display: flex; flex-direction: column; gap: 60px; margin-top: 60px;">
         
         <!-- Service 1: Creative Tech -->
-        <div class="glass-card" style="padding: 50px; display: grid; grid-template-columns: 1fr 2fr; gap: 40px; align-items: start;">
-          <div>
-            <span style="font-size: 12px; font-weight: 700; color: var(--color-primary); letter-spacing: 2px;">01 / CREATIVE TECH</span>
-            <h3 style="font-size: 26px; font-weight: 800; margin: 12px 0 16px;">Web & App<br>Development</h3>
-            <div style="color: var(--text-muted); font-size: 14px;">Webアプリケーション開発 / モバイル開発 / UI・UXデザイン</div>
-          </div>
-          <div>
-            <p style="color: var(--text-secondary); font-size: 15px; line-height: 1.8; margin-bottom: 24px;">
-              私たちは、TypeScript、React/Next.js、Vue/Nuxt.jsなどのモダンフロントエンド技術を駆使し、超高速でアニメーションが豊富な美しいユーザーインターフェースを開発します。モバイルアプリ開発（Flutter、React Native、Swift/Kotlin）もシームレスに対応し、優れたUX設計に魂を吹き込みます。
-            </p>
-            <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; color: var(--text-primary); font-size: 14px; font-weight: 600;">
-              <li style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; background: var(--color-primary); border-radius: 50%;"></span> SPA / SSR Webアプリケーション</li>
-              <li style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; background: var(--color-primary); border-radius: 50%;"></span> iOS / Android クロスプラットフォーム開発</li>
-              <li style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; background: var(--color-primary); border-radius: 50%;"></span> UI・UX体験デザイン / インタラクティブ設計</li>
-              <li style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; background: var(--color-primary); border-radius: 50%;"></span> 高性能ヘッドレスCMS導入</li>
-            </ul>
+        <div class="glass-card" style="overflow: hidden;">
+          <div class="grid-service-detail service-card-inner" style="padding: 50px;">
+            <div>
+              <span style="font-size: 12px; font-weight: 700; color: var(--color-primary); letter-spacing: 2px;">01 / CREATIVE TECH</span>
+              <h3 style="font-size: 26px; font-weight: 800; margin: 12px 0 16px;">Web & App<br>Development</h3>
+              <div style="color: var(--text-muted); font-size: 14px;">Webアプリケーション開発 / モバイル開発 / UI・UXデザイン</div>
+            </div>
+            <div>
+              <p style="color: var(--text-secondary); font-size: 15px; line-height: 1.8; margin-bottom: 24px;">
+                私たちは、TypeScript、React/Next.js、Vue/Nuxt.jsなどのモダンフロントエンド技術を駆使し、超高速でアニメーションが豊富な美しいユーザーインターフェースを開発します。モバイルアプリ開発（Flutter、React Native、Swift/Kotlin）もシームレスに対応し、優れたUX設計に魂を吹き込みます。
+              </p>
+              <ul class="grid-cols-2" style="display: grid; gap: 16px; color: var(--text-primary); font-size: 14px; font-weight: 600;">
+                <li style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; background: var(--color-primary); border-radius: 50%;"></span> SPA / SSR Webアプリケーション</li>
+                <li style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; background: var(--color-primary); border-radius: 50%;"></span> iOS / Android クロスプラットフォーム開発</li>
+                <li style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; background: var(--color-primary); border-radius: 50%;"></span> UI・UX体験デザイン / インタラクティブ設計</li>
+                <li style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; background: var(--color-primary); border-radius: 50%;"></span> 高性能ヘッドレスCMS導入</li>
+              </ul>
+            </div>
           </div>
         </div>
 
         <!-- Service 2: DX Consulting -->
-        <div class="glass-card" style="padding: 50px; display: grid; grid-template-columns: 1fr 2fr; gap: 40px; align-items: start;">
-          <div>
-            <span style="font-size: 12px; font-weight: 700; color: var(--color-secondary); letter-spacing: 2px;">02 / CONSULTING</span>
-            <h3 style="font-size: 26px; font-weight: 800; margin: 12px 0 16px;">DX & Cloud<br>Integration</h3>
-            <div style="color: var(--text-muted); font-size: 14px;">AWS・GCPクラウド移行 / マイクロサービス / インフラ自動化</div>
-          </div>
-          <div>
-            <p style="color: var(--text-secondary); font-size: 15px; line-height: 1.8; margin-bottom: 24px;">
-              レガシーシステムのモダンなクラウドベースアーキテクチャ（AWS、Google Cloud）への安全な移行を支援します。インフラのコード化（TerraformなどによるIaC）、サーバーレス設計、Kubernetesによるコンテナ化を通じて、急激なユーザー増加に耐えうる拡張性と万全のセキュリティ、そして運用コストの圧倒的な削減を実現します。
-            </p>
-            <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; color: var(--text-primary); font-size: 14px; font-weight: 600;">
-              <li style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; background: var(--color-secondary); border-radius: 50%;"></span> クラウドマイグレーション支援</li>
-              <li style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; background: var(--color-secondary); border-radius: 50%;"></span> Terraformによるインフラ自動定義 (IaC)</li>
-              <li style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; background: var(--color-secondary); border-radius: 50%;"></span> Kubernetesコンテナオーケストレーション</li>
-              <li style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; background: var(--color-secondary); border-radius: 50%;"></span> CI・CD自動ビルドデプロイパイプライン構築</li>
-            </ul>
+        <div class="glass-card" style="overflow: hidden;">
+          <div class="grid-service-detail service-card-inner" style="padding: 50px;">
+            <div>
+              <span style="font-size: 12px; font-weight: 700; color: var(--color-secondary); letter-spacing: 2px;">02 / CONSULTING</span>
+              <h3 style="font-size: 26px; font-weight: 800; margin: 12px 0 16px;">DX & Cloud<br>Integration</h3>
+              <div style="color: var(--text-muted); font-size: 14px;">AWS・GCPクラウド移行 / マイクロサービス / インフラ自動化</div>
+            </div>
+            <div>
+              <p style="color: var(--text-secondary); font-size: 15px; line-height: 1.8; margin-bottom: 24px;">
+                レガシーシステムのモダンなクラウドベースアーキテクチャ（AWS、Google Cloud）への安全な移行を支援します。インフラのコード化（TerraformなどによるIaC）、サーバーレス設計、Kubernetesによるコンテナ化を通じて、急激なユーザー増加に耐えうる拡張性と万全のセキュリティ、そして運用コストの圧倒的な削減を実現します。
+              </p>
+              <ul class="grid-cols-2" style="display: grid; gap: 16px; color: var(--text-primary); font-size: 14px; font-weight: 600;">
+                <li style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; background: var(--color-secondary); border-radius: 50%;"></span> クラウドマイグレーション支援</li>
+                <li style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; background: var(--color-secondary); border-radius: 50%;"></span> Terraformによるインフラ自動定義 (IaC)</li>
+                <li style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; background: var(--color-secondary); border-radius: 50%;"></span> Kubernetesコンテナオーケストレーション</li>
+                <li style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; background: var(--color-secondary); border-radius: 50%;"></span> CI・CD自動ビルドデプロイパイプライン構築</li>
+              </ul>
+            </div>
           </div>
         </div>
 
         <!-- Service 3: AI Integration -->
-        <div class="glass-card" style="padding: 50px; display: grid; grid-template-columns: 1fr 2fr; gap: 40px; align-items: start;">
-          <div>
-            <span style="font-size: 12px; font-weight: 700; color: var(--color-accent); letter-spacing: 2px;">03 / AI SOLUTIONS</span>
-            <h3 style="font-size: 26px; font-weight: 800; margin: 12px 0 16px;">AI & Neural<br>Systems</h3>
-            <div style="color: var(--text-muted); font-size: 14px;">LLMカスタマイズ / AIエージェント設計 / データ分析エンジン</div>
-          </div>
-          <div>
-            <p style="color: var(--text-secondary); font-size: 15px; line-height: 1.8; margin-bottom: 24px;">
-              ChatGPT、Claudeなどの大規模言語モデル（LLM）APIを業務フローへシームレスに統合し、社内データに基づいた高精度な独自ナレッジAI（RAGシステム）の構築を可能にします。定型業務の自動処理、インテリジェントなデータ抽出、ユーザー対応の自動化など、即効性の高い次世代AIエージェントソリューションを提供します。
-            </p>
             <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; color: var(--text-primary); font-size: 14px; font-weight: 600;">
               <li style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; background: var(--color-accent); border-radius: 50%;"></span> 独自RAG（検索拡張生成）システム開発</li>
               <li style="display: flex; align-items: center; gap: 8px;"><span style="width: 6px; height: 6px; background: var(--color-accent); border-radius: 50%;"></span> 自律型業務AIエージェントの作成</li>
@@ -155,14 +149,14 @@
   </section>
 
   <!-- SERVICE PROCESS SECTION -->
-  <section style="padding: 100px 0; position: relative; z-index: 10;">
+  <section class="section-mobile-pad" style="padding: 100px 0; position: relative; z-index: 10;">
     <div class="container">
       <div class="section-header">
         <span class="section-tag">Process</span>
         <h2 class="section-title">導入プロセス</h2>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 60px;">
+      <div class="grid-4col" style="margin-top: 60px;">
         <div class="glass-card" style="padding: 30px; position: relative;">
           <span style="font-size: 36px; font-weight: 800; color: var(--color-glow); position: absolute; top: 15px; right: 20px;">01</span>
           <h4 style="font-size: 18px; font-weight: 700; margin-bottom: 12px; margin-top: 10px;">ヒアリング・戦略立案</h4>

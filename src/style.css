@@ -121,6 +121,49 @@ ul, ol {
   padding-right: 24px;
 }
 
+/* Responsive Grid Utility Classes */
+.grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.grid-3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.grid-4col {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.grid-service-detail {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.grid-form-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.grid-cols-2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Hero Section Default Padding */
+.hero-section {
+  padding: 220px 0 120px;
+}
+
 /* Gradients */
 .text-gradient {
   background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
@@ -630,5 +673,169 @@ ul, ol {
 @media (max-width: 768px) {
   .section-title {
     font-size: 28px;
+  }
+}
+
+/* ==========================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================== */
+
+/* --- Tablet (max 1024px) --- */
+@media (max-width: 1024px) {
+  .grid-4col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --- Tablet (max 992px) --- */
+@media (max-width: 992px) {
+  .grid-3col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-service-detail {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Mobile (max 768px) --- */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .grid-2col {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .grid-3col {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-4col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-service-detail {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-form-2col {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .glass-panel {
+    padding: 24px 20px;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 140px 0 80px !important;
+    min-height: auto !important;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  .hero-title {
+    font-size: 38px !important;
+    letter-spacing: -1px !important;
+  }
+
+  .hero-subtitle {
+    font-size: 15px !important;
+  }
+
+  .hero-image-wrapper {
+    display: none !important;
+  }
+
+  /* Section spacing */
+  .section-mobile-pad {
+    padding: 60px 0 !important;
+  }
+
+  /* News header flex */
+  .news-header-flex {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
+  }
+
+  /* CTA Section */
+  .cta-title {
+    font-size: 26px !important;
+  }
+
+  .cta-desc {
+    font-size: 15px !important;
+  }
+
+  /* Services intro grid */
+  .services-intro-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  /* About CEO grid */
+  .ceo-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  /* About CEO heading */
+  .ceo-heading {
+    font-size: 24px !important;
+  }
+
+  /* Service card padding */
+  .service-card-inner {
+    padding: 28px 24px !important;
+  }
+
+  /* Section margins */
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  /* Footer margin */
+  .site-footer {
+    margin-top: 60px;
+  }
+}
+
+/* --- Small Mobile (max 576px) --- */
+@media (max-width: 576px) {
+  .grid-4col {
+    grid-template-columns: 1fr;
+  }
+
+  .page-hero {
+    padding: 130px 0 70px !important;
+  }
+
+  .page-hero-title {
+    font-size: 30px !important;
+  }
+
+  .page-hero-desc {
+    font-size: 15px !important;
+  }
+
+  .hero-title {
+    font-size: 32px !important;
+  }
+
+  /* Contact form panel */
+  .contact-panel {
+    padding: 28px 20px !important;
   }
 }
